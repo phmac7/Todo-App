@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+$font-primary: 'Josefin Sans', sans-serif;
+
+
 [data-theme="light"]{
 --color-background: hsl(0, 0%, 98%);
 --color-container-background: #FFF;
@@ -8,8 +13,8 @@
 --color-filters: hsl(235, 19%, 35%);
 --color-close-button: hsl(236, 9%, 61%);
 --color-mark-button: hsl(0, 0%, 98%);
---img-background-mobile: url(/public/assets/bg-mobile-light.jpg)
---img-background-desktop: url(/public/assets/bg-desktop-light.jpg)
+--img-background-mobile: url(/assets/bg-mobile-light.jpg);
+--img-background-desktop: url(/assets/bg-desktop-light.jpg);
 }
 [data-theme="dark"]{
 --color-background: hsl(235, 21%, 11%);
@@ -21,15 +26,15 @@
 --color-filters:hsl(237, 14%, 26%) ;
 --color-close-button: hsl(234, 11%, 52%);
 --color-mark-button: hsl(233, 14%, 35%);
---img-background-mobile: url(/public/assets/bg-mobile-dark.jpg)
---img-background-desktop: url(/public/assets/bg-desktop-dark.jpg)
+--img-background-mobile: url(/assets/bg-mobile-dark.jpg);
+--img-background-desktop: url(/assets/bg-desktop-dark.jpg);
 }
 
 @function color($color-name) {
     @return var(--color-#{$color-name});
-  }
+}
 
-  @function img($img-name) {
+@function img($img-name) {
     @return var(--img-#{$img-name});
-  }
+}
 

@@ -1,15 +1,12 @@
-import { useState } from "react";
-import Todo from "./components/Pages/Todo";
-import styles from "./App.module.scss";
+import Main from "./components/Pages/Main";
+import ThemeProvider from "./context/ThemeContext";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
-
-  const switchTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-
-  return <Todo />;
+  return (
+    <ThemeProvider>
+      <Main />
+    </ThemeProvider>
+  );
 }
 
 export default App;

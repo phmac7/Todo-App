@@ -1,0 +1,10 @@
+@use '/public/styles/main' as *;
+
+.title {
+    font-family: $font-primary;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+}
