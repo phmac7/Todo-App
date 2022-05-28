@@ -6,7 +6,10 @@ import styles from './TaskList.module.scss'
 import { TaskListContext } from '/src/context/TaskListContext'
 
 function TaskList() {
-    const { taskList } = useContext(TaskListContext)
+    const { taskList, filter } = useContext(TaskListContext)
+
+
+
     return (
         <>
             <ul className={styles['task__list']}>
@@ -15,14 +18,7 @@ function TaskList() {
 
                     taskList.map((task) => {
                         return (
-                            <li
-                                className={styles['task__list--item']}
-                                key={task.id}
-                            >
-                                <Card>
-                                    <TaskItem task={task.task} id={task.id} />
-                                </Card>
-                            </li>
+                            <TaskItem task={task.task} id={task.id} key={task.id} />
                         )
                     })}
 

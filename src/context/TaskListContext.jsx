@@ -6,6 +6,8 @@ export const TaskListContext = React.createContext({})
 const TaskListProvider = ({ children }) => {
     const [taskList, setTaskList] = useState([])
     const [newTask, setNewTask] = useState('')
+    const [filter, setFilter] = useState('all')
+
 
     const onChangeTaskHandler = (e) => {
         setNewTask(e.target.value)
@@ -44,8 +46,9 @@ const TaskListProvider = ({ children }) => {
         setTaskList(filteredArray)
     }
 
+
     return (
-        <TaskListContext.Provider value={{ taskList, addTask, newTask, onChangeTaskHandler, setTaskList, toggleCompleted, toggleNotCompleted, removeTaskHandler, removeCompletedTasks }}>
+        <TaskListContext.Provider value={{ taskList, addTask, newTask, onChangeTaskHandler, setTaskList, toggleCompleted, toggleNotCompleted, removeTaskHandler, removeCompletedTasks, filter, setFilter }}>
             {children}
         </TaskListContext.Provider>
     )

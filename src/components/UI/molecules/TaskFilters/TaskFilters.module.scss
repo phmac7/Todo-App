@@ -10,11 +10,57 @@
 
     &__items--left {}
 
+    &__filter {
+        position: absolute;
+        bottom: -9rem;
+        display: flex;
+        width: 100%;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        height: 6rem;
+        background-color: color(container-background);
+        gap: 2rem;
+        border-radius: 5px;
+
+        &--all {
+            cursor: pointer;
+
+            &:hover {
+                color: color(text-hover);
+            }
+        }
+
+        &--active {
+            cursor: pointer;
+
+            &:hover {
+                color: color(text-hover)
+            }
+        }
+
+        &--completed {
+            cursor: pointer;
+
+            &:hover {
+                color: color(text-hover)
+            }
+        }
+    }
+
     &__clear-completed {
         cursor: pointer;
 
         &:hover {
             color: color(text-hover)
         }
+    }
+}
+
+.filter-active {
+    color: hsl(220, 98%, 61%);
+
+    &:hover {
+        color: hsl(220, 98%, 61%);
     }
 }
