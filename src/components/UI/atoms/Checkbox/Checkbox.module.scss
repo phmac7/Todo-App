@@ -1,9 +1,26 @@
 @use '/public/styles/variables' as *;
 
 .checkbox {
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     border-radius: 50%;
     border: 1px solid #77777736;
     cursor: pointer;
+    margin: 0 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox svg {
+    display: none
+}
+
+.checkbox.checked svg {
+    display: flex;
+}
+
+.checkbox.checked {
+    background-image: linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }

@@ -1,9 +1,12 @@
 import React from 'react'
+import Check from '../Svg/Check'
 import styles from './Checkbox.module.scss'
 
-function Checkbox() {
+function Checkbox({ onClick, isCompleted }) {
     return (
-        <span className={styles.checkbox}></span>
+        <span onClick={onClick} className={`${styles.checkbox} ${isCompleted ? styles.checked : ''}`}>
+            <Check />
+        </span>
     )
 }
 

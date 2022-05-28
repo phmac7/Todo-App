@@ -3,7 +3,8 @@
 .container {
     width: 100%;
     padding: 6.3rem 3.2rem;
-    height: fit-content;
+    min-height: 100vh;
+    height: max-content;
     background-image: img(background-mobile);
     background-repeat: no-repeat;
     background-size: 100% 270px;
