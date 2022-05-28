@@ -6,6 +6,9 @@ function Checkbox({ onClick, isCompleted }) {
     return (
         <span onClick={onClick} className={`${styles.checkbox} ${isCompleted ? styles.checked : ''}`}>
             <Check />
+
+            <span className={`${styles['aux']} ${isCompleted ? styles['hide-aux'] : ''}`}>
+            </span>
         </span>
     )
 }

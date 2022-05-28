@@ -8,7 +8,9 @@
     align-items: center;
     color: color(filters);
 
-    &__items--left {}
+    &__items--left {
+        flex: 1;
+    }
 
     &__filter {
         position: absolute;
@@ -22,6 +24,8 @@
         background-color: color(container-background);
         gap: 2rem;
         border-radius: 5px;
+
+
 
         &--all {
             cursor: pointer;
@@ -63,4 +67,18 @@
     &:hover {
         color: hsl(220, 98%, 61%);
     }
+}
+
+@media only screen and (min-width: 700px) {
+
+    .filters__filter {
+        position: relative;
+        bottom: auto;
+        gap: 1rem;
+        background-color: transparent;
+        border: none;
+        flex: 1;
+
+    }
+
 }

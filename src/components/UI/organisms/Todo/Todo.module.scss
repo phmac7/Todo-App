@@ -10,4 +10,15 @@
     background-size: 100% 270px;
     transition: all .5s;
     background-color: color(background);
+
+    @media only screen and (min-width: 700px) {
+        background-image: img(background-desktop)
+    }
+
+    &>* {
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
 }

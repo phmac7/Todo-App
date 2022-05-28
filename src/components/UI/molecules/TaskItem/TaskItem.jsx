@@ -5,7 +5,6 @@ import Cross from '../../atoms/Svg/Cross'
 import styles from './TaskItem.module.scss'
 import { TaskListContext } from '/src/context/TaskListContext'
 
-
 function TaskItem({ task, id }) {
     const { taskList, toggleCompleted, toggleNotCompleted, removeTaskHandler, filter } = useContext(TaskListContext)
     const [isCompleted, setIsCompleted] = useState(false)
@@ -26,7 +25,6 @@ function TaskItem({ task, id }) {
             return true
         }
     }
-
 
     return (
         <li

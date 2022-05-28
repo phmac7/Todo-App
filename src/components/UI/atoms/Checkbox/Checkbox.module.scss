@@ -4,13 +4,26 @@
     width: 23px;
     height: 23px;
     border-radius: 50%;
-    border: 1px solid #77777736;
     cursor: pointer;
     margin: 0 2.5rem;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: color(mark-button);
+
+    &:not(.checked) {
+        & .aux {
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            background-color: color(container-background);
+        }
+    }
+
+    &:not(.checked):hover {
+        background-image: linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    }
 }
 
 .checkbox svg {
