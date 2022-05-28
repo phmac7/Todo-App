@@ -31,13 +31,21 @@ const TaskListProvider = ({ children }) => {
 
 
     const removeTaskHandler = (id) => {
-        let filteredArray = taskList.filter(item => item.id !== id)
-        setTaskList(filteredArray);
+        if (typeof (taskList) === 'undefined') {
+            return
+        } else {
+            let filteredArray = taskList.filter(item => item.id !== id)
+            setTaskList(filteredArray);
+        }
     }
 
+    const removeCompletedTasks = () => {
+        let filteredArray = taskList.filter(item => item.completed === false)
+        setTaskList(filteredArray)
+    }
 
     return (
-        <TaskListContext.Provider value={{ taskList, addTask, newTask, onChangeTaskHandler, setTaskList, toggleCompleted, toggleNotCompleted, removeTaskHandler }}>
+        <TaskListContext.Provider value={{ taskList, addTask, newTask, onChangeTaskHandler, setTaskList, toggleCompleted, toggleNotCompleted, removeTaskHandler, removeCompletedTasks }}>
             {children}
         </TaskListContext.Provider>
     )
