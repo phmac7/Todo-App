@@ -1,0 +1,10 @@
+@use '/public/styles/variables' as *;
+
+.card {
+    width: 100%;
+    position: relative;
+    background-color: color(container-background);
+    height: 5.8rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0);
+}
