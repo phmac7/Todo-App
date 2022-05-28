@@ -1,0 +1,10 @@
+.task__list {
+
+    &--item-flex {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &--text {}
+}

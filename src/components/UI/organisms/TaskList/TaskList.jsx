@@ -21,6 +21,54 @@ function TaskList() {
         id: useId(),
         task: 'teste',
         completed: false
+    }, {
+        id: useId(),
+        task: 'teste',
+        completed: false
+    }, {
+        id: useId(),
+        task: 'teste',
+        completed: false
+    }, {
+        id: useId(),
+        task: 'teste',
+        completed: false
+    }, {
+        id: useId(),
+        task: 'teste',
+        completed: false
+    }, {
+        id: useId(),
+        task: 'teste',
+        completed: false
+    }, {
+        id: useId(),
+        task: 'teste',
+        completed: false
+    }, {
+        id: useId(),
+        task: 'teste',
+        completed: false
+    }, {
+        id: useId(),
+        task: 'teste',
+        completed: false
+    }, {
+        id: useId(),
+        task: 'teste',
+        completed: false
+    }, {
+        id: useId(),
+        task: 'teste',
+        completed: false
+    }, {
+        id: useId(),
+        task: 'teste',
+        completed: false
+    }, {
+        id: useId(),
+        task: 'teste',
+        completed: false
     }]
 
     return (

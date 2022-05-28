@@ -4,16 +4,10 @@ import NewTask from "../../molecules/NewTask/NewTask";
 import TaskList from "../TaskList/TaskList";
 import styles from "./Todo.module.scss";
 
-function Todo({ getAppHeight }) {
-    const todoContainer = useRef()
-
-    useEffect(() => {
-
-        getAppHeight(todoContainer.current?.clientHeight)
-    }, [todoContainer])
+function Todo() {
 
     return (
-        <div className={styles.container} ref={todoContainer}>
+        <div className={styles.container} >
             <Header />
             <NewTask />
             <TaskList />
