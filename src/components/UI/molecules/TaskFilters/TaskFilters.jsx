@@ -14,7 +14,7 @@ function TaskFilters() {
     return (
         <Card>
             <div className={styles.filters}>
-                <span className={styles['filters__items-left']}>{counter} items left</span>
+                <span className={styles['filters__items-left']}>{counter} item{`${counter === 1 ? '' : 's'}`} left</span>
                 <div className={styles['filters__filter']}>
                     <span onClick={() => setFilter('all')} className={`${styles['filters__filter--all']} ${filter === 'all' ? styles['filter-active'] : ''}`}>All</span>
                     <span onClick={() => setFilter('active')} className={`${styles['filters__filter--all']} ${filter === 'active' ? styles['filter-active'] : ''}`}>Active</span>
