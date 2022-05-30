@@ -16,11 +16,26 @@ function TaskFilters() {
             <div className={styles.filters}>
                 <span className={styles['filters__items-left']}>{counter} item{`${counter === 1 ? '' : 's'}`} left</span>
                 <div className={styles['filters__filter']}>
-                    <span onClick={() => setFilter('all')} className={`${styles['filters__filter--all']} ${filter === 'all' ? styles['filter-active'] : ''}`}>All</span>
-                    <span onClick={() => setFilter('active')} className={`${styles['filters__filter--all']} ${filter === 'active' ? styles['filter-active'] : ''}`}>Active</span>
-                    <span onClick={() => setFilter('completed')} className={`${styles['filters__filter--all']} ${filter === 'completed' ? styles['filter-active'] : ''}`}>Completed</span>
+                    <button
+                        onClick={() => setFilter('all')} className={`${styles['filters__filter--all']} ${styles['filters__filter--button']} ${filter === 'all' ? styles['filter-active'] : ''}`}>
+                        <span >All</span>
+                    </button>
+                    <button
+                        onClick={() => setFilter('active')} className={`${styles['filters__filter--all']} ${styles['filters__filter--button']} ${filter === 'active' ? styles['filter-active'] : ''}`}>
+                        <span>Active</span>
+                    </button>
+                    <button
+                        onClick={() => setFilter('completed')} className={`${styles['filters__filter--all']} ${styles['filters__filter--button']} ${filter === 'completed' ? styles['filter-active'] : ''}`}>
+                        <span >Completed</span>
+                    </button>
                 </div>
-                <span onClick={removeCompletedTasks} className={styles['filters__clear-completed']}>Clear Completed</span>
+                <button className={`${styles['filters__filter--button']} ${styles['filters__clear-completed']}`}
+                    onClick={removeCompletedTasks}>
+                    <span
+                    >
+                        Clear Completed
+                    </span>
+                </button>
             </div>
         </Card>
     )

@@ -12,6 +12,11 @@
     justify-content: center;
     background-color: color(filters);
 
+    &__button {
+        background-color: transparent;
+        border: none;
+    }
+
     &:not(.checked) {
         & .aux {
             width: 21px;

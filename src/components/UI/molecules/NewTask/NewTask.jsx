@@ -11,6 +11,9 @@ function NewTask() {
             <input className={styles['newtask__input']} type="text" placeholder="Create a new todo.." onChange={onChangeTaskHandler}
                 value={newTask} />
             <span className={styles['newtask__enter-button']}></span>
+            <button className={styles['newtask__enter--button']}>
+                <span className={styles['newtask__enter--icon']}></span>
+            </button>
         </form>
     )
 }

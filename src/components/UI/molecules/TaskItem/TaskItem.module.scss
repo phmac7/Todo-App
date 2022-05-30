@@ -31,6 +31,14 @@
     border: none;
     cursor: pointer;
     z-index: 2;
+
+    &:hover path {
+        fill: color(hover-cross);
+    }
+
+    &:focus path {
+        fill: color(hover-cross);
+    }
 }
 
 .hide {

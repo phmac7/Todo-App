@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react'
+import React, { useEffect, useCallback, useState } from 'react'
 import { v4 as uuidv4 } from "uuid"
 
 
@@ -14,19 +14,22 @@ const TaskListProvider = ({ children }) => {
     const [filter, setFilter] = useState('all')
 
 
-    const onChangeTaskHandler = (e) => {
+    const onChangeTaskHandler = useCallback((e) => {
         setNewTask(e.target.value)
-    }
+    }, [newTask])
 
-    const addTask = (e) => {
+
+    const addTask = useCallback((e) => {
         e.preventDefault()
-        setTaskList(prev => [...prev, {
-            id: uuidv4(),
-            task: newTask,
-            completed: false
-        }])
-        setNewTask('')
-    }
+        if (/^\S/.test(newTask)) {
+            setTaskList(prev => [...prev, {
+                id: uuidv4(),
+                task: newTask,
+                completed: false
+            }])
+            setNewTask('')
+        }
+    }, [newTask])
 
     useEffect(() => {
         localStorage.setItem('tasks', JSON.stringify(taskList))

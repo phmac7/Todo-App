@@ -4,12 +4,14 @@ import styles from './Checkbox.module.scss'
 
 function Checkbox({ onClick, isCompleted }) {
     return (
-        <span onClick={onClick} className={`${styles.checkbox} ${isCompleted ? styles.checked : ''}`}>
-            <Check />
+        <button className={styles.checkbox__button}>
+            <span onClick={onClick} className={`${styles.checkbox} ${isCompleted ? styles.checked : ''}`}>
+                <Check />
 
-            <span className={`${styles['aux']} ${isCompleted ? styles['hide-aux'] : ''}`}>
+                <span className={`${styles['aux']} ${isCompleted ? styles['hide-aux'] : ''}`}>
+                </span>
             </span>
-        </span>
+        </button>
     )
 }
 

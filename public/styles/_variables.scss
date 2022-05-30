@@ -12,8 +12,10 @@ $font-primary: 'Josefin Sans', sans-serif;
     --color-input-text: hsl(233, 11%, 84%);
     --color-filters: hsl(235, 19%, 35%);
     --color-mark-button: hsl(236, 9%, 61%);
+    --color-hover-cross: hsl(235, 19%, 35%);
     --img-background-mobile: url(/assets/bg-mobile-light.jpg);
     --img-background-desktop: url(/assets/bg-desktop-light.jpg);
+
 }
 
 [data-theme="dark"] {
@@ -25,6 +27,7 @@ $font-primary: 'Josefin Sans', sans-serif;
     --color-input-text: hsl(234, 11%, 52%);
     --color-filters: hsl(234, 11%, 52%);
     --color-mark-button: hsl(233, 14%, 35%);
+    --color-hover-cross: hsl(236, 33%, 92%);
     --img-background-mobile: url(/assets/bg-mobile-dark.jpg);
     --img-background-desktop: url(/assets/bg-desktop-dark.jpg);
 }

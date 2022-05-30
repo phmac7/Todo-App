@@ -26,6 +26,15 @@
         border-radius: 5px;
         border: .5px solid rgba(0, 0, 0, .1);
 
+        &--button {
+            background-color: transparent;
+            color: color(filters);
+            border: none;
+            font-weight: 500;
+            font-family: inherit;
+            font-size: 1.6rem;
+        }
+
 
 
 
@@ -33,6 +42,10 @@
             cursor: pointer;
 
             &:hover {
+                color: color(text-hover);
+            }
+
+            &:focus {
                 color: color(text-hover);
             }
         }
@@ -43,6 +56,10 @@
             &:hover {
                 color: color(text-hover)
             }
+
+            &:focus {
+                color: color(text-hover);
+            }
         }
 
         &--completed {
@@ -50,6 +67,10 @@
 
             &:hover {
                 color: color(text-hover)
+            }
+
+            &:focus {
+                color: color(text-hover);
             }
         }
     }
@@ -60,6 +81,10 @@
         &:hover {
             color: color(text-hover)
         }
+
+        &:focus {
+            color: color(text-hover);
+        }
     }
 }
 
@@ -67,6 +92,10 @@
     color: hsl(220, 98%, 61%);
 
     &:hover {
+        color: hsl(220, 98%, 61%);
+    }
+
+    &:focus {
         color: hsl(220, 98%, 61%);
     }
 }
