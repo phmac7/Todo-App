@@ -6,9 +6,7 @@ import styles from './TaskList.module.scss'
 import { TaskListContext } from '/src/context/TaskListContext'
 
 function TaskList() {
-    const { taskList, filter } = useContext(TaskListContext)
-
-
+    const { taskList } = useContext(TaskListContext)
 
     return (
         <>

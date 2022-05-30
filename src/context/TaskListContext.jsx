@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { v4 as uuidv4 } from "uuid"
 
-export const TaskListContext = React.createContext({})
+
+export const TaskListContext = React.createContext({
+    taskList: [],
+    newTask: '',
+    filter: 'all'
+})
 
 const TaskListProvider = ({ children }) => {
-    const [taskList, setTaskList] = useState([])
+    const [taskList, setTaskList] = useState(JSON.parse(localStorage.getItem('tasks')) || [])
     const [newTask, setNewTask] = useState('')
     const [filter, setFilter] = useState('all')
 
@@ -22,6 +27,10 @@ const TaskListProvider = ({ children }) => {
         }])
         setNewTask('')
     }
+
+    useEffect(() => {
+        localStorage.setItem('tasks', JSON.stringify(taskList))
+    }, [taskList])
 
     const toggleCompleted = (taskList, id) => {
         setTaskList(taskList.map(item => item.id === id ? { ...item, completed: true } : item))

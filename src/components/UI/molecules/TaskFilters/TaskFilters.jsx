@@ -11,8 +11,6 @@ function TaskFilters() {
         typeof (taskList) === 'undefined' ? setCounter(0) : setCounter(taskList.filter((item) => item.completed === false).length)
     }, [taskList])
 
-
-    console.log(filter)
     return (
         <Card>
             <div className={styles.filters}>

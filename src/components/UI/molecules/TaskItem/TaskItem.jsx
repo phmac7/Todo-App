@@ -7,7 +7,7 @@ import { TaskListContext } from '/src/context/TaskListContext'
 
 function TaskItem({ task, id }) {
     const { taskList, toggleCompleted, toggleNotCompleted, removeTaskHandler, filter } = useContext(TaskListContext)
-    const [isCompleted, setIsCompleted] = useState(false)
+    const [isCompleted, setIsCompleted] = useState(taskList.find((task) => task.id === id).completed)
     const getToggle = () => {
         if (taskList.find((task) => task.id === id).completed === false) {
             toggleCompleted(taskList, id)
@@ -25,7 +25,6 @@ function TaskItem({ task, id }) {
             return true
         }
     }
-
     return (
         <li
             className={`${styles['task__list--item']} ${checkingFilter() ? styles.hide : ''}`}
