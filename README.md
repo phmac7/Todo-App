@@ -26,7 +26,7 @@ Users should be able to:
 - Filter by all/active/complete todos
 - Clear all completed todos
 - Toggle light and dark mode
-- **Bonus**: Drag and drop to reorder items on the list (not implemented yet)
+- **Bonus**: Drag and drop to reorder items on the list
 
 <!-- ### Screenshot
 
@@ -49,4 +49,5 @@ Users should be able to:
 - Css Modules
 - Mobile-first workflow
 - uuid package for unique ids
+- React-tiny-dnd lib for DnD functionality
 - [React](https://reactjs.org/) - JS library
