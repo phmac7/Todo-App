@@ -1,5 +1,14 @@
 # Frontend Mentor - Todo app solution
 
+<table>
+    <tr>
+        <td>
+            <img src="/public/assets/todo-app.gif" width="580" align="top">
+            <img src="/public/assets/todo-app-mob.gif" height="430">
+        </td>
+    </tr>
+</table>
+
 This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
@@ -35,7 +44,6 @@ Users should be able to:
 
 ### Links -->
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [https://phmac7-todo-app.netlify.app/](https://phmac7-todo-app.netlify.app/)
 
 ## My process
@@ -45,9 +53,11 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- Atomic Design Structure
 - Sass
 - Css Modules
 - Mobile-first workflow
 - uuid package for unique ids
-- React-tiny-dnd lib for DnD functionality
+- [React-tiny-dnd](https://github.com/hosembafer/react-tiny-dnd?ref=reactjsexample.com) - Drag and Drop functionality
+- [Vite](https://vitejs.dev/) 
 - [React](https://reactjs.org/) - JS library
